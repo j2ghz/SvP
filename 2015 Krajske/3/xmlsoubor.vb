@@ -2,7 +2,7 @@
 
 Public Class xmlsoubor
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click   'dialog na vyber souboru
         If OpenFileDialog1.ShowDialog() = Windows.Forms.DialogResult.OK Then
             TextBox1.Text = OpenFileDialog1.FileName
         End If
@@ -17,9 +17,9 @@ Public Class xmlsoubor
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         TextBox2.Text = ""
         Dim xml As New XmlDocument
-        xml.Load(TextBox1.Text)
+        xml.Load(TextBox1.Text) 'otevreni souboru
         xml.Normalize()
-        For Each clovek As XmlElement In xml.GetElementsByTagName("pomxml")
+        For Each clovek As XmlElement In xml.GetElementsByTagName("pomxml") 'uprava pokud je to soubor 1. typu
             TextBox2.Text &= clovek("pc").InnerText & "  ->  "
             clovek("pc").InnerText = IIf(ListBox1.SelectedIndex = 0, 400, 800) + CInt(clovek("pc").InnerText.TrimEnd("."))
             TextBox2.Text &= clovek("pc").InnerText & Environment.NewLine
@@ -40,7 +40,7 @@ Public Class xmlsoubor
             rocn.InnerText = IIf(ListBox1.SelectedIndex = 0, "5", "9")
             clovek.AppendChild(rocn)
         Next
-        For Each row As XmlElement In xml.GetElementsByTagName("Row")
+        For Each row As XmlElement In xml.GetElementsByTagName("Row")   'uprava pokud je 2. typu
             If Integer.TryParse(row.ChildNodes(0).ChildNodes(0).InnerText, Nothing) Then
                 TextBox2.Text &= row.ChildNodes(0).ChildNodes(0).InnerText & "  ->  "
                 row.ChildNodes(0).ChildNodes(0).InnerText = IIf(ListBox1.SelectedIndex = 0, 400, 800) + CInt(row.ChildNodes(0).ChildNodes(0).InnerText.TrimEnd("."))
@@ -70,12 +70,12 @@ Public Class xmlsoubor
                 rocn.AppendChild(da)
                 row.AppendChild(rocn)
             End If
-        Next
+        Next    'ulozeni
         xml.Save(TextBox1.Text.Replace("vstup", "vystup"))
         Process.Start(TextBox1.Text.Replace("vstup", "vystup"))
     End Sub
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load    'nycteni formulare
         If TextBox1.Text.Contains("4") Then
             ListBox1.SelectedIndex = 0
         Else

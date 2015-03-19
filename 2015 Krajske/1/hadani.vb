@@ -19,7 +19,7 @@ Public Class hadani
     End Sub
 
     Sub zacatekKola()
-        If totoKoloTipy > 0 AndAlso totoKoloTipy < nejrychlejsiKolotipy Then
+        If totoKoloTipy > 0 AndAlso totoKoloTipy < nejrychlejsiKolotipy Then 'sledovani nej kola
             nejrychlejsiKolo = kolo
             nejrychlejsiKolotipy = totoKoloTipy
         End If
@@ -27,7 +27,7 @@ Public Class hadani
         ListBox1.Items.Add("Začíná kolo")
         soucet = 0
         kostky = New List(Of Byte())
-        For i As Integer = 0 To rand.Next(0, 6)
+        For i As Integer = 0 To rand.Next(0, 6) 'generování cisel
             Dim k(4) As Byte
             For b As Integer = 0 To 4
                 k(b) = rand.Next(1, 7)
@@ -35,7 +35,7 @@ Public Class hadani
             Next
             kostky.Add(k)
         Next
-        If poprveZacinal = 0 Then
+        If poprveZacinal = 0 Then   'kdo zacina
             hrac = rand.Next(1, 3)
         Else
             If poprveZacinal = 1 Then
@@ -54,14 +54,14 @@ Public Class hadani
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         totoKoloTipy += 1
-        Select Case hrac
+        Select Case hrac    'sledovani tipu
             Case 1
                 hrac1tipy &= NumericUpDown1.Value & "; "
             Case 2
                 hrac2tipy &= NumericUpDown1.Value & "; "
         End Select
         Select Case NumericUpDown1.Value
-            Case Is < soucet
+            Case Is < soucet    'je vetsi mensi uhodl
                 ListBox1.Items.Add("Hráč " & hrac & " tipuje " & NumericUpDown1.Value & "; hádané číslo je větší")
                 hrac = IIf(hrac = 1, 2, 1)
                 Label1.Text = "Hraje hráč " & hrac
@@ -79,7 +79,7 @@ Public Class hadani
     End Sub
 
     Private Sub vyhra(hrac As Integer)
-        ListBox1.Items.Add("Toto kolo vyhrál hráč " & hrac)
+        ListBox1.Items.Add("Toto kolo vyhrál hráč " & hrac) 'vypis kdyz vyhraje
         ListBox1.Items.Add("Hádané číslo " & soucet & " vzniklo:")
         For Each kostka In kostky
             ListBox1.Items.Add(enumerate(kostka))
@@ -111,7 +111,7 @@ Public Class hadani
         zacatekKola()
     End Sub
 
-    Function enumerate(ByVal pole() As Byte) As String
+    Function enumerate(ByVal pole() As Byte) As String  'funkce na vypsani kostek
         Dim sb As New StringBuilder
         Dim souc As Integer = 0
         For Each item In pole
