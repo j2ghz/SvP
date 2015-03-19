@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class Form1
+Partial Class xmlsoubor
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -36,14 +36,14 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextBox1.Location = New System.Drawing.Point(12, 12)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(182, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(632, 22)
         Me.TextBox1.TabIndex = 0
-        Me.TextBox1.Text = "C:\Users\Jozef\Downloads\vstup4.xml"
+        Me.TextBox1.Text = "C:\Users\Jozef\Downloads\vstup8.xml"
         '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(200, 12)
+        Me.Button1.Location = New System.Drawing.Point(650, 12)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(30, 23)
         Me.Button1.TabIndex = 1
@@ -53,7 +53,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.Location = New System.Drawing.Point(155, 41)
+        Me.Button2.Location = New System.Drawing.Point(605, 41)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(75, 23)
         Me.Button2.TabIndex = 2
@@ -83,14 +83,14 @@ Partial Class Form1
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox2.Size = New System.Drawing.Size(229, 309)
+        Me.TextBox2.Size = New System.Drawing.Size(668, 524)
         Me.TextBox2.TabIndex = 4
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(248, 403)
+        Me.ClientSize = New System.Drawing.Size(698, 618)
         Me.Controls.Add(Me.TextBox2)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.Button2)
