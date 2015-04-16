@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Formulář</title>
+    <link rel="stylesheet" href="page.css"/>
+    <script src="jquery.js"></script>
+    <script>
+        function process(url) {
+            var term = $('#toProcess').val();
+
+            if (!term.length) {
+                alert('Nebyl zadán dotaz!');
+                return;
+            }
+            window.open(url + term, '_blank');
+        }
+
+        $(document).ready(function () {
+            $('#doGoogle').click(function () {
+                process('https://www.google.cz/search?q=');
+            });
+
+            $('#doSeznam').click(function () {
+                process('http://search.seznam.cz/?q=');
+            });
+
+            $('#doCzNic').click(function () {
+                process('http://www.nic.cz/search/?query=');
+            });
+
+            $('#doTinyUrl').click(function () {
+                process('http://tinyurl.com/create.php?url=');
+            });
+
+            $('#doJs').click(function () {
+                process('javascript:');
+            });
+        });
+    </script>
+</head>
+<body>
+<div>
+    <input type="text" placeholder="Zpracovat" id="toProcess" value=""><input type="button" value="Google" id="doGoogle"><input type="button" value="Seznam" id="doSeznam"><input type="button" value="CZ.NIC" id="doCzNic"><input type="button" value="TinyURL" id="doTinyUrl"><input type="button" value="Vykonat" id="doJs">
+</div>
+</body>
+</html>

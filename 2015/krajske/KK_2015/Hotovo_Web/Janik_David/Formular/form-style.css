@@ -1,0 +1,159 @@
+body, html {
+  margin: 0;
+  padding: 0; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif; }
+
+.flexible_content {
+  width: 1024px;
+  height: auto;
+  margin: 0 auto; }
+
+/*  CONTENT  */
+.content #jednoPole form {
+  margin-top: 20px; }
+  .content #jednoPole form #search {
+    width: 256px;
+    border: 1px solid #878787;
+    height: 23px; }
+  .content #jednoPole form #googleSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+  .content #jednoPole form #seznamSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+  .content #jednoPole form #nicSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+  .content #jednoPole form #tinySend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+  .content #jednoPole form #doSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+.content h1 {
+  line-height: 80px;
+  color: black;
+  font-size: 25px; }
+.content #google {
+  margin-top: 20px; }
+  .content #google #googleSearch {
+    width: 256px;
+    border: 1px solid #878787;
+    height: 23px; }
+  .content #google #googleSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+.content #seznam {
+  margin-top: 5px; }
+  .content #seznam #seznamSearch {
+    width: 256px;
+    border: 1px solid #878787;
+    height: 23px; }
+  .content #seznam #seznamSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+.content #czNic {
+  margin-top: 5px; }
+  .content #czNic #nicSearch {
+    width: 256px;
+    border: 1px solid #878787;
+    height: 23px; }
+  .content #czNic #nicSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+.content #tinyURL {
+  margin-top: 5px; }
+  .content #tinyURL #tinySearch {
+    width: 256px;
+    border: 1px solid #878787;
+    height: 23px; }
+  .content #tinyURL #tinySend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+.content #vykonat {
+  margin-top: 5px; }
+  .content #vykonat #doSearch {
+    width: 256px;
+    border: 1px solid #878787;
+    height: 23px; }
+  .content #vykonat #doSend {
+    background: black;
+    width: 80px;
+    height: 25px;
+    color: white;
+    border: 1px solid black;
+    margin-left: -5px; }
+.content #google > form > #googleSearch:hover, .content #seznam > form > #seznamSearch:hover, .content #czNic > form > #nicSearch:hover,
+.content #tinyURL > form > #tinySearch:hover, .content #vykonat > form > #doSearch:hover {
+  background: rgba(0, 222, 0, 0.25);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+.content #google > form > #googleSearch:focus, .content #seznam > form > #seznamSearch:focus, .content #czNic > form > #nicSearch:focus,
+.content #tinyURL > form > #tinySearch:focus, .content #vykonat > form > #doSearch:focus {
+  background: rgba(0, 222, 0, 0.25);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+.content #google > form > #googleSend:hover, .content #seznam > form > #seznamSend:hover, .content #czNic > form > #nicSend:hover,
+.content #tinyURL > form > #tinySend:hover, .content #vykonat > form > #doSend:hover {
+  background: rgba(0, 90, 0, 0.9);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+.content #google > form > #googleSend:focus, .content #seznam > form > #seznamSend:focus, .content #czNic > form > #nicSend:focus,
+.content #tinyURL > form > #tinySend:focus, .content #vykonat > form > #doSend:focus {
+  background: rgba(0, 90, 0, 0.9);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+.content #jednoPole > form > #googleSend:hover, .content #jednoPole > form > #seznamSend:hover, .content #jednoPole > form > #nicSend:hover,
+.content #jednoPole > form > #tinySend:hover, .content #jednoPole > form > #doSend:hover {
+  background: rgba(0, 90, 0, 0.9);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+.content #jednoPole > form > #googleSend:focus, .content #jednoPole > form > #seznamSend:focus, .content #jednoPole > form > #nicSend:focus,
+.content #jednoPole > form > #tinySend:focus, .content #jednoPole > form > #doSend:focus {
+  background: rgba(0, 90, 0, 0.9);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+.content #jednoPole > form > #search:hover {
+  background: rgba(0, 222, 0, 0.25);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+.content #jednoPole > form > #search:focus {
+  background: rgba(0, 222, 0, 0.25);
+  border: 1px solid rgba(0, 90, 0, 0.9); }
+
+/*# sourceMappingURL=form-style.css.map */

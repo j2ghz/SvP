@@ -1,0 +1,6 @@
+	Stiskem tlaèítka pro naètení vstupu se zobrazí okno s možností výbìru vstupu, která je filtrovaná na .txt
+soubory.
+	Program po naètení vstupu vypíše øady na sebe navazujících kostek domina (pravdìpodobnì ne všechny, ale 
+velkou èást z nich) a také nejdelší ze všech nelezených. Pokud jsou nìkteré øady stejnì dlouhé, vypíše jenom 
+první z nich.
+	Je také možné uložit výstupy do souboru, který se umístí do stejné složky jako program samotný.

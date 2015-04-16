@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Kalendář</title>
+    <link rel="stylesheet" href="page.css"/>
+    <script src="jquery.js"></script>
+    <script>
+        var today = new Date();
+
+        var allMonths = [
+            "Leden", "Únor", "Březen", "Duben",
+            "Květen", "Červen", "Červenec", "Srpen",
+            "Září", "Říjen", "Listopad", "Prosinec"];
+
+        var allDays = ["Pondělí", "Úterý", "Středa", "Čtvrtek", "Pátek", "Sobota", "Neděle"];
+
+
+        var allYears = [];
+        for (var i = 1970; i <= 2199; i++) {
+            allYears.push(i);
+        }
+
+        var currentDay = today.getDay();
+        var currentMonth = today.getMonth();
+        var currentYear = today.getFullYear();
+
+        function drawTable() {
+            var htmlOut = "";
+            var totalDays = new Date(currentYear, currentMonth, 0).getDate();
+
+            htmlOut += "<tr>";
+            var daysInRow = 0;
+            for (var iterator = 1; iterator < totalDays; iterator++) {
+                daysInRow++;
+                var dayNum = (daysInRow == 0) ? daysInRow + 1 : daysInRow - 1;
+                var dayInString = allDays[dayNum];
+
+                htmlOut += "<td><span>" + iterator + "</span><p>" + dayInString + "</p></td>";
+                if (daysInRow == 7) {
+                    daysInRow = 0;
+                    htmlOut += "</tr>";
+                }
+            }
+            /*if (totalDays/7 > 4) {
+                htmlOut += "<td class='no' colspan='" + (5 * 7 + 1 - totalDays) + "'></td>";
+            }*/
+            htmlOut += "</tr>";
+
+            $('#calendar').html(htmlOut);
+        }
+
+        function writeTodayDate() {
+            $('#desc').text("Dnes je " + currentDay + ". " + allMonths[currentMonth] + " " + currentYear);
+        }
+
+        function setMonth(num) {
+            currentMonth = num;
+            $('#currentMonth').val(num + 1);
+        }
+
+        function setYear(num) {
+            currentYear = num;
+            $('#currentYear').val(num);
+        }
+
+        $(document).ready(function () {
+
+            drawTable();
+            writeTodayDate();
+
+            $('#monthUp').click(function () {
+                var newMonth = (currentMonth < 11) ? currentMonth + 1 : 0;
+                setMonth(newMonth);
+                drawTable();
+
+            });
+
+            $('#monthDown').click(function () {
+                var newMonth = (currentMonth > 0) ? currentMonth - 1 : 11;
+                setMonth(newMonth);
+                drawTable();
+
+            });
+
+            $('#yearUp').click(function () {
+                var newYear = (currentYear < 2199) ? currentYear + 1 : 1970;
+                setYear(newYear);
+                drawTable();
+
+            });
+
+            $('#yearDown').click(function () {
+                var newYear = (currentYear > 1970) ? currentYear - 1 : 2199;
+                setYear(newYear);
+                drawTable();
+
+            });
+        });
+    </script>
+</head>
+<body>
+<nav>
+    <select id="currentMonth">
+        <script>
+            $.each(allMonths, function (key, value) {
+                if (key == currentMonth) {
+                    document.write("<option value='" + (key + 1) + "' selected=''>" + value + "</option>");
+                } else {
+                    document.write("<option value='" + (key + 1) + "'>" + value + "</option>");
+                }
+            });
+        </script>
+    </select>
+    <br/>
+    <img src="img/left.png" id="monthDown">
+    <img src="img/right.png" id="monthUp" class="to-right">
+</nav>
+<nav class="ml10">
+    <select id="currentYear">
+        <script>
+            $.each(allYears, function (key, value) {
+                if (value == currentYear) {
+                    document.write("<option value='" + value + "' selected=''>" + value + "</option>");
+                } else {
+                    document.write("<option value='" + value + "'>" + value + "</option>");
+                }
+            });
+        </script>
+    </select>
+    <br/>
+    <img src="img/left.png" id="yearDown">
+    <img src="img/right.png" id="yearUp" class="to-right">
+</nav>
+<table class="calendar" id="calendar">
+</table>
+<div class="desc" id="desc"></div>
+</body>
+</html>

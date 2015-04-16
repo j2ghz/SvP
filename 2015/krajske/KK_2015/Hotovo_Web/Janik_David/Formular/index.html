@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulář</title>
+    <link rel="stylesheet" href="form-style.css"/>
+</head>
+<body>
+<div class="content">
+    <div class="flexible_content">
+        <div class="form">
+            <h1>Zadání 1 - Formulář</h1>
+            <div id="google">
+                <form action="http://www.google.com/search" method="get" target="_blank">
+                    <input type="text" id="googleSearch" name="q" placeholder="Vyhledat Googlem"/>
+                    <input type="submit" id="googleSend" value="Google"/>
+                </form>
+            </div>
+            <div id="seznam">
+                <form action="http://search.seznam.cz/" method="get" target="_blank">
+                    <input type="text" id="seznamSearch" name="q" placeholder="Vyhledat Seznamem"/>
+                    <input type="submit" id="seznamSend" value="Seznam"/>
+                </form>
+            </div>
+            <div id="czNic">
+                <form action="https://www.nic.cz/whois/" method="get" target="_blank">
+                    <input type="text" id="nicSearch" name="q" placeholder="Vyhledat v registru nic.cz"/>
+                    <input type="submit" id="nicSend" value="CZ.NIC"/>
+                </form>
+            </div>
+            <div id="tinyURL">
+                <form action="http://tinyurl.com/create.php" method="post" target="_blank">
+                    <input type="text" id="tinySearch" name="url" placeholder="Zkrátit URL pomocí tinyurl.com"/>
+                    <input type="submit" id="tinySend" name="submit" value="TinyURL"/>
+                </form>
+            </div>
+            <div id="vykonat">
+                <form method="get">
+                    <input type="text" id="doSearch" placeholder="Kód v javascriptu"/>
+                    <input type="submit" id="doSend" value="vykonat"/>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

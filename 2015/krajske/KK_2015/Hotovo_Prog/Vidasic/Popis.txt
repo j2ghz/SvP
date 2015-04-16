@@ -1,0 +1,1 @@
+Program vypocet zlomu bere soubor zadani.txt ze slozky na disku R:\\ v souboru se zadanim a pote ulozi ve slozce bin ve slozce s programem.

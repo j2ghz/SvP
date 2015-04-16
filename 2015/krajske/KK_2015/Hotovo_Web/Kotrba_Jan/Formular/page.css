@@ -1,0 +1,29 @@
+body {
+    padding: 50px;
+    margin: 0;
+}
+
+input[type="text"] {
+    border: 1px solid black;
+    padding: 4px;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+input[type="text"]:hover, input[type="text"]:focus {
+    background: lightgreen;
+    border-color: green;
+}
+
+input[type="button"] {
+    background: black;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    padding: 4px;
+    width: 80px;
+}
+
+input[type="button"]:hover, input[type="button"]:focus {
+    background: green;
+}

@@ -1,0 +1,49 @@
+*
+{
+    font-size: 15px;
+    font-family: sans-serif;
+}
+
+.center-box
+{
+    margin-top: 15px;
+
+    /*width: 500px;*/
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search-input
+{
+    outline: none;
+    display: inline-block;
+    width: 220px;
+    height: 20px;
+}
+
+.search-input:hover, .search-input:focus
+{
+    background-color: #00c360;
+    border-color: #007238;
+}
+
+.button
+{
+    display: inline-block;
+    width: 90px;
+    height: 26px;
+    background-color: black;
+    color: white;
+    border:none;
+}
+
+.button:hover, .button:focus
+{
+    background-color: #00c360;
+}
+
+.group
+{
+    margin-top: 5px;
+}

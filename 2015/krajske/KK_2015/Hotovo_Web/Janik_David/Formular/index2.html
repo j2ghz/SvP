@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulář</title>
+        <link rel="stylesheet" href="form-style.css"/>
+        <script>
+
+            function submitFunction(i) {
+                if (i==1) document.search.action=
+                        window.location.href="http://www.google.com/search";
+                if (i==2) document.search.action=
+                        window.location.href="http://search.seznam.cz/";
+                if (i==3) document.search.action=
+                        window.location.href="https://www.nic.cz/whois";
+                if (i==4) document.search.action=
+                        window.location.href="http://tinyurl.com/create.php";
+                document.theForm.submit()
+            }
+
+        </script>
+    </head>
+    <body>
+    <div class="content">
+        <div class="flexible_content">
+            <h1>Zadání 1 - Formulář - 1 pole</h1>
+            <div id="jednoPole">
+                <form name="myForm">
+                    <input type="text" id="search" name="hledej" placeholder="Vyhledat..."/>
+                    <input type="button" id="googleSend" value="Google" onClick="submitFunction(1)"/>
+                    <input type="button" id="seznamSend" value="Seznam" onClick="submitFunction(2)"/>
+                    <input type="button" id="nicSend" value="CZ.NIC" onClick="submitFunction(3)"/>
+                    <input type="button" id="tinySend" value="TinyURL" onClick="submitFunction(4)"/>
+                    <input type="button" id="doSend" value="vykonat"/>
+                </form>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>

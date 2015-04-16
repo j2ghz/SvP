@@ -1,0 +1,60 @@
+body, html {
+  margin: 0;
+  padding: 0; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  background: lightblue;
+  font-family: 'Open Sans', sans-serif; }
+
+.flexible_content {
+  width: 1024px;
+  height: auto;
+  margin: 0 auto; }
+
+/*  CONTENT  */
+.content {
+  width: 100%;
+  height: auto; }
+  .content h1 {
+    line-height: 80px;
+    color: white;
+    font-size: 25px; }
+  .content table {
+    background: #ffffff;
+    width: 100%;
+    height: auto;
+    border-radius: 5px; }
+    .content table tr td {
+      line-height: 60px;
+      text-align: center;
+      border-radius: 5px; }
+    .content table tr td:hover {
+      background: #848484;
+      color: #ffffff; }
+    .content table tr.numbers td {
+      text-align: left;
+      padding-bottom: 20px;
+      padding-left: 20px;
+      border-left: 1px solid #dcdcdc;
+      border-right: 1px solid #dcdcdc;
+      border-top: 1px solid #dcdcdc; }
+    .content table tr.numbers td.nedele {
+      background: rgba(255, 0, 0, 0.3);
+      border: 1px solid rgba(162, 0, 0, 0.65);
+      color: #7c0000; }
+    .content table tr.numbers td.nedele:hover {
+      background: #666666;
+      color: #ffffff; }
+    .content table tr.numbers td.today {
+      background: #666666;
+      color: #ffffff; }
+
+@media screen and (max-width: 1024px) {
+  .flexible_content {
+    width: 98%; } }
+
+/*# sourceMappingURL=cal-style.css.map */

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Formulář</title>
+    <link rel="stylesheet" href="page.css"/>
+    <script src="jquery.js"></script>
+    <script>
+        function find(service, url) {
+            var term = $('#findBy' + service).val();
+
+            if (!term.length) {
+                alert('Nebyl zadán dotaz na ' + service + '!');
+                return;
+            }
+            window.open(url + term, '_blank');
+        }
+
+        $(document).ready(function () {
+            $("#findByGoogle").keypress(function (e) {
+                if (e.which == 13) {
+                    $("#doGoogle").click();
+                }
+            });
+            $('#doGoogle').click(function () {
+                find('Google', 'https://www.google.cz/search?q=');
+            });
+
+
+            $("#findBySeznam").keypress(function (e) {
+                if (e.which == 13) {
+                    $("#doSeznam").click();
+                }
+            });
+            $('#doSeznam').click(function () {
+                find('Seznam', 'http://search.seznam.cz/?q=');
+            });
+
+
+            $("#findByCzNic").keypress(function (e) {
+                if (e.which == 13) {
+                    $("#doCzNic").click();
+                }
+            });
+            $('#doCzNic').click(function () {
+                find('CzNic', 'http://www.nic.cz/search/?query=');
+            });
+
+
+            $("#findByTinyUrl").keypress(function (e) {
+                if (e.which == 13) {
+                    $("#doTinyUrl").click();
+                }
+            });
+            $('#doTinyUrl').click(function () {
+                find('TinyUrl', 'http://tinyurl.com/create.php?url=');
+            });
+
+
+            $("#processJs").keypress(function (e) {
+                if (e.which == 13) {
+                    $("#doJs").click();
+                }
+            });
+            $('#doJs').click(function () {
+                var term = $('#processJs').val();
+
+                if (!term.length) {
+                    alert('Nebyl zadán javascript!');
+                    return;
+                }
+                window.open("javascript:" + term, '_blank');
+            });
+        });
+    </script>
+</head>
+<body>
+<div>
+    <input type="text" placeholder="Vyhledat Googlem" id="findByGoogle" value=""><input type="button" value="Google"
+                                                                                        id="doGoogle"><br/>
+    <input type="text" placeholder="Vyhledat Seznamem" id="findBySeznam"><input type="button" value="Seznam"
+                                                                                id="doSeznam"><br/>
+    <input type="text" placeholder="Vyhledat v registru nic.cz" id="findByCzNic"><input type="button" value="CZ.NIC"
+                                                                                        id="doCzNic"><br/>
+    <input type="text" placeholder="Zkrátit URL pomocí tinyurl.com" id="findByTinyUrl"><input type="button"
+                                                                                              value="TinyURL"
+                                                                                              id="doTinyUrl"><br/>
+    <input type="text" placeholder="Kód v javascriptu" id="processJs"><input type="button" value="Vykonat" id="doJs">
+</div>
+</body>
+</html>

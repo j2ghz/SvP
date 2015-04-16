@@ -1,0 +1,7 @@
+!!!PROGRAM MNÌ NEŠEL Z NEJAKÉHO DÙVODU SPUSTIT PØÍMO V C#, ALE JENOM .EXE SOUBOR!!!
+
+	Program po stisknutí tlaèítka pro naètení vstupu zobrazí okno, kde uživatel smí vybrat vstupní soubor,
+chybu v souboru nebo jeho špatný formát program ohlásí.
+	Ihned po naètení souboru program vypíše všechny trojice èísel oèekávaného výsledku.
+	Po stisknutí tlaèítka pro uložení do souboru program pøepíše výsledky do souboru ve stejné složce, jako je
+samotný program.

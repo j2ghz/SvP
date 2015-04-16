@@ -1,0 +1,2 @@
+	Po kliknutí na tlaèítko pro vykreslení uživat musí zvolit barvu a na obrazovku se vykreslí prasátko ve 
+zvolené barvì s velikostí odpovídající oknu.

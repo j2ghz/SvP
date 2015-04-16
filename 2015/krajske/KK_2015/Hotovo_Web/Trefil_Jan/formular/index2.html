@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head lang="cs">
+        <meta charset="UTF-8">
+        <title>Formulář</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    </head>
+    <body>
+        <div class="center-box">
+            <div class="group">
+                <input id="input" type="text" class="search-input" placeholder="Vyhledat Googlem">
+                <button class="button" onclick="window.location.href = 'https://www.google.cz/search?q=' + $('#input').val();">Google</button>
+                <button class="button" onclick="window.location.href = 'http://search.seznam.cz/?q=' + $('#input').val();">Seznam</button>
+                <button class="button" onclick="window.location.href = 'https://www.nic.cz/whois/?c=' + $('#input').val();">CZ.NIC</button>
+                <button class="button" onclick="window.location.href = 'http://tinyurl.com/create.php?url=' + $('#input').val();">TinyURL</button>
+                <button class="button" onclick="eval($('#input').val());">Vykonat</button>
+            </div>
+        </div>
+    </body>
+</html>
