@@ -1,0 +1,4 @@
+﻿Je dán textový soubor TEXT. TXT (jde o soubor, vytvořený v Poznámkovém bloku
+a členěný na řádky). Tento soubor editoval informaticky ne zcela gramotný jedinec,
+a tudíž obsahuje typografické chyby. Primárním úkolem vašeho programu je některé 
+tyto chyby opravit.

@@ -1,0 +1,7 @@
+Microsoft Visual Studio is an integrated   development environment (IDE) from Microsoft. 
+It is used to develop computer programs for Microsoft Windows,as well as web sites, web applications 
+and web services.It  can  produce both native code and managed code.
+Microsoft Visual   Studio je vyvojove prostredi (IDE) od Microsoftu. 
+Muze být pouzito pro vyvoj konzolovych aplikaci a aplikaci s grafickym rozhranim spolu s
+aplikacemi Windows Forms,webovymi strankami,webovymi aplikacemi a
+webovymi   sluzbami jak ve strojovem kodu,tak v rizenem kodu na platformach Microsoft Windows.
