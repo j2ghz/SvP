@@ -1,0 +1,3 @@
+uloha by mela byt kompletni. Muj program nad ramec zadani odstranuje i mezery na konci radku.
+
+Ovladani: Je zrejme z popisku tlacitek, v menu sifrovat se do prvniho policka zada pocet znaku, po kliknuti na sifrovat se ke kazdemu znaku ten pocet pricte, pri odsifrovani se odecte. (zmeni pocet radku, protoze se sifruje i znak konce radku)

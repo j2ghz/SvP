@@ -1,0 +1,3 @@
+Uloha by mela byt komletni krome useku pro narocne, viz zadani
+
+Ovladani: dle zadani cisla se presouvaji klikanim na ne. dole se zobrazuje cas, nahore v menu je tlacitko nacist
